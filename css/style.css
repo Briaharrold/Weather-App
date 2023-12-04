@@ -1,0 +1,19 @@
+.bg{
+    background-image: url(../Images/wolfgang-hasselmann-bR_-gllg7Bs-unsplash.jpg);
+    height: 900px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* position: relative; */
+    overflow-y: hidden;
+    
+}
+.translucentBg{
+    background-color: white;
+    border-radius: 25px;
+    opacity: 20%;
+}
+.whiteTxt{
+    color: white;
+}
