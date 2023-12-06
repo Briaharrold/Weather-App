@@ -7,14 +7,24 @@ let insertMax = document.getElementById("Insert Max");
 let insertName = document.getElementById("Insert Name");
 let insertDay = document.getElementById("Insert Day");
 const d = Date();
+let date2 = document.getElementById("date");
 const weekDay=["Sunday","Monday","Tuesday","Wednesday",,"Thursday","Friday","Saturday" ];
-
+let lat;
+let long;
+let t = new Date();
+document.getElementById('date').innerText = t.toDateString();
 function ApiCall(){
     //We are goin to initaiate the fetcher request from our random wor api
     // fetch('https://api.openweathermap.org/data/2.5/weather?q=Stockton&appid=a843da14ff8561f5d288b3a4dc783df6')
-  
-  
 
+    
+    fetch(`https://api.openweathermap.org/data/3.0/onecall/day_summary?lat=${lat}&lon=${long}&date=2023-04-12&appid=${apiKey}`)
+    .then((response)=>{
+      //using JSON method to parse into json data
+      return response.json();
+  })
+  .then((data => date2.innerHTML =  data.date))
+  
     let userData = usersInput.value;
     console.log(userData);
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userData}&appid=${apiKey}&units=imperial`)
@@ -73,8 +83,8 @@ fetch(`https://history.openweathermap.org/data/3.0/history/timemachine?lat=51.51
 }
 
 btn.addEventListener('click',function(e){
+    
 //on click we are going to make data pop up based on what city user picks
-apiCall()
 ApiCall();
 });
 //navigator.geolocation returns a gelocation object lat and long
@@ -90,9 +100,8 @@ function success(position){
     console.log("Our latitude " + position.coords.latitude);
    console.log("Our longitude "+ position.coords.longitude);
    let gotPosition = function (position) {
-
-    let lat = position.coords.latitude;
-    let long = position.coords.longitude;
+     lat = position.coords.latitude;
+     long = position.coords.longitude;
     console.log(long) ;
     console.log(lat) ;
    }
@@ -108,19 +117,11 @@ function success(position){
        //This is getting the data from the api  and inserting the degrees onto the html page
        //The Math.floor() static method always rounds down and returns the largest integer less than or equal to a given number.
        .then((data => insertHere.innerHTML =  Math.floor(data.main.feels_like)+ "°"))
+       
    }
 function errorFunc(error){
 console.log(error.message);
 }
 
 
-async function apiCall(){
- 
-    let lat = success(position.coords.latitude);
-    let long =  success(position.coords.longitude);
-    const promise = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${apiKey}`);
-    const data = await promise.json();
-    console.log(data.weather[3]);
-    
 
-}

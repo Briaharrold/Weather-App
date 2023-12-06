@@ -9,11 +9,128 @@
     overflow-y: hidden;
     
 }
+.bgC{
+    background-color: #2274D0;
+}
 .translucentBg{
-    background-color: white;
+    background-color: #2274D0;
     border-radius: 25px;
     opacity: 20%;
 }
 .whiteTxt{
     color: white;
+}
+
+.Elements{
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    right: 27%;
+    /* transform: translate(-30%, -20%); */
+    color: white;
+}
+.degreeTxt{
+    font-size: 70px;
+    text-align: left;
+}
+.regularTxt{
+    font-size: 40px;
+}
+.bg4{
+    filter: blur(1px);
+    -webkit-filter: blur(1px);
+    background-image: url(../images/Truly.png);
+}
+.bg3{
+    width: 700px;
+    background-color: #2274D0;
+    border-radius: 10px;
+    height: 200px;
+ 
+}
+.bg2{
+    /* filter: blur(1px);
+    -webkit-filter: blur(1px); */
+    background-color: r#2274D0;
+    border-radius: 10px;
+    height: 350px;
+ margin-top: 7%;
+ border:13px solid rgba(205, 205, 205, 0.1);
+ 
+
+    /* transform: translate(-50%, -50%); */
+}
+.inBoxTxt{
+    color: white;
+    opacity: 100%;
+}
+.degree{
+    padding-top: 4%;
+    text-align: center;
+    /* position: absolute; */
+    /* top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    color: white;
+}
+.translucentBg{
+    background-color: white;
+    border-radius: 25px;
+    opacity: 20%;
+}
+.whiteSearchI{
+    color: white;
+}
+.paddingLeft{
+    padding-left: 15%;
+}
+a{
+    color: white!important;
+    text-decoration: none!important;
+}
+
+
+.btn2{
+    border: 0;
+    font-weight: bold;
+   color: black;
+   background-color: rgb(208, 208, 208);
+   margin-top: 7%;
+    border-radius: 100px;
+    padding-right: 10%;
+    padding-left: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+.fav:hover{
+    width: 300px;
+    background-color: rgb(255,255,255,0.2);
+    border-radius: 20px;
+    height: 30px;
+ border:23px solid rgba(205, 205, 205, 0.1);
+  border-radius: 50px;
+  
+}
+.heartPad{
+    padding-left: 30%;
+}
+.center{
+    padding-right: 15%;
+    padding-left: 15%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.pbFav{
+    padding-bottom: 5%;;
+}
+.pbFav2{
+    padding-bottom: 2%;;
 }
