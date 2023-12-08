@@ -10,6 +10,7 @@
       rel="icon"
       href=".../icons8-search-32.png"
     />
+    
     <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -17,26 +18,22 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+
   </head>
   <body class="bg whiteTxt">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <nav class="navbar navbar-expand-lg bgC">
+      <div class="row ">
+        <div class="col-12 px-0 ">
+          <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ">
-                  <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown link
+              <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle border" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Favorites
                     </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <ul class="dropdown-menu  ">
                       <li><a class="dropdown-item" href="#">Something else here</a></li>
                     </ul>
                   </li>
@@ -44,24 +41,26 @@
               </div>
             </div>
           </nav>
+          
         </div>
       </div>
-      <div class="row pt-5 paddingLeft">
-        <div class="col-4">
-          <button type="button" id="btn" class="btn whiteSearchI">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+      <div class="row pt-5">
+        <div class="col-12 d-flex justify-content-center">
           <input
-            class="translucentBg"
+            class="translucentBg text-center"
             type="text"
             alt=""
             srcset=""
-            placeholder="Search City"
+            placeholder="Search City or Zip Code"
             id="usersInput"
           />
+          <button type="button" id="btn" class="btn whiteSearchI">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
         </div>
         <div class="col-4 whiteSearchI">
-          <h5 class="text-end">Sunday, November 27</h5>
+       
         </div>
         <div class="col-4 whiteSearchI ">
           <h3 id="date">fff</h3>
@@ -74,26 +73,46 @@
 
       <div
         class="row bg3 d-flex justify-content-center"
-        style="margin-left: 25%; margin-top: 3%"
+        style="margin-left: 25%; "
       >
-        <div class="col-6 degree d-flex justify-content-center">
+        <div class="col-6 degree">
+          <h1 id="Insert Name" class="regularTxt text-start">City Name</h1>
+   
+        </div>
+        <div class="col-6 text-end pt-1">
+          <a href=""><img width="26px" height="26px" src="https://img.icons8.com/metro/26/FFF904/star.png" alt="star"/></a>
+          
+        </div>
+        <hr class="mx-0">
           <div class="row">
-            <div class="col-12">
-              <h1 id="Insert Day" class="regularTxt">Sunday</h1>
-            </div>
-            <div class="col-12">
+
+            <div class="col-4">
+              <h3 id="Insert Day" class="">Sunday</h3>
+              <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="40px" alt="" srcset="">
+              <p>Partly Cloudy</p>
+              <h5>30</h5>
+          </div>
+
+          <div class="col-4 mt-3">
+            <h5 id="Insert Day" class="">Sunday</h5>
+            <h5>30</h5>
+           
+        </div>
+
+        <div class="col-4  mt-3">
+          <h5 id="Insert Day" class="">Sunday</h5>
+          <h5>30</h5>
+          
+      </div>
               <div class="row">
                 <div class="col-6 d-flex justify-content-end px-0">
-                  <i
-                    class="fa-solid fa-cloud fa-2xl"
-                    style="color: #ffffff"
-                  ></i>
+                jj
                 </div>
                 <div class="col-6 px-0">
                   <h1 id="Insert Here" class="degreeTxt">Degree</h1>
                 </div>
               </div>
-            </div>
+            
           </div>
         </div>
         <div class="col-6 degree">
@@ -104,13 +123,71 @@
             </div>
             <div class="col-6 px-0">
               <h4 id="Insert Max" class="text-start">Max</h4>
+              <h3 id="Insert Type"></h3>
             </div>
+
           </div>
         </div>
       </div>
 
-      <div class="container bg2 ">
-   
+      
+        <div class="container  bg2 px-5 py-5"> 
+          <div class="row"> 
+              <div class="col mx-1 ">
+                <div class="cardbg " style="width: 12rem;">
+                 
+                  <div class="card-body">
+                    <h5 class="card-text text-center">Some </h5>
+                  </div>
+                  <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                  <p class="text-center">Sunny</p>
+
+                </div>
+              </div> 
+              <div class="col mx-1 ">
+                <div class="cardbg " style="width: 12rem;">
+                
+                  <div class="card-body">
+                    <h5 class="card-text text-center">Some </h5>
+                    <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                    <p class="text-center">Sunny</p>
+                  </div>
+                </div>
+              </div> 
+
+              <div class="col mx-1 ">
+                <div class="cardbg " style="width: 12rem;">
+     
+                  <div class="card-body">
+                    <h5 class="card-text text-center">Some </h5>
+                    <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                    <p class="text-center">Sunny</p>
+                  </div>
+                </div>
+              </div> 
+              <div class="col mx-1">
+                <div class="cardbg " style="width: 12rem;">
+          
+                  <div class="card-body">
+                    <h5 class="card-text text-center">Some </h5>
+                    <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                    <p class="text-center">Sunny</p>
+                  </div>
+                </div>
+              </div> 
+              <div class="col mx-1 ">
+                <div class="cardbg " style="width: 12rem;">
+                
+               
+                  <h5 class="card-text text-center">Some </h5>
+                  <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                  <p class="text-center">Sunny</p>
+               
+                </div>
+              </div> 
+          </div> 
+      </div> 
+
 
      
 
