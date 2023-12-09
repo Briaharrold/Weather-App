@@ -4,6 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gelasio:wght@400;700&display=swap" rel="stylesheet">
     <link
       type="image/png"
       sizes="32x32"
@@ -20,13 +31,13 @@
     />
 
   </head>
-  <body class="bg whiteTxt">
+  <body class="bg whiteTxt regFont">
     <div class="container-fluid">
       <div class="row ">
         <div class="col-12 px-0 ">
           <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
+              <a class="navbar-brand text-center" href="#">Weather<br> Sprint</a>
               <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item dropdown">
@@ -44,7 +55,7 @@
           
         </div>
       </div>
-      <div class="row pt-5">
+      <div class="row pt-5 pb-5">
         <div class="col-12 d-flex justify-content-center">
           <input
             class="translucentBg text-center"
@@ -59,49 +70,39 @@
           </button>
         </div>
         </div>
-        <div class="col-4 whiteSearchI">
-       
-        </div>
-        <div class="col-4 whiteSearchI ">
-          <h3 id="date">fff</h3>
-  
-         
-        </div>
-
-
-      </div>
+      
 
       <div
-        class="row bg3 d-flex justify-content-center "
+        class="row bg3 d-flex justify-content-center mt-5 "
         style="margin-left: 25%; "
       >
         <div class="col-6 degree">
-          <h1 id="Insert Name" class="regularTxt text-start">City Name</h1>
+          <h1 id="Insert Name" class="regularTxt regFont text-start">City Name</h1>
    
         </div>
         <div class="col-6 text-end pt-1">
-          <a href=""><img width="26px" height="26px" src="https://img.icons8.com/metro/26/FFF904/star.png" alt="star"/></a>
+          <a href=""><img width="26px" height="26px" id="starBtn" src="https://img.icons8.com/metro/26/FFF904/star.png" alt="star"/></a>
           
         </div>
-        <hr class="mx-0">
+        <hr class="mb-0 sizing">
           <div class="row">
 
-            <div class="col-4 ">
-              <h3 id="Insert Day" class=" text-center">Sunday</h3>
-              <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="40px" alt="" srcset="">
-              <p id="Insert Type" class="mb-0 text-center"></p>
-              <h5 id="Insert Here" class="degreeTxt text-center"></h5>
+            <div class="col-4 "style=" padding-left: 18%;">
+              <h3 id="Insert Day" class=" text-center regFont">Sunday</h3>
+              <img class="img-margin" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="60px" alt="" srcset="">
+              <p id="Insert Type" class="mb-0 text-center "></p>
+              <h5 id="Insert Here" class="degreeTxt text-center tenFont"></h5>
           </div>
 
-          <div class="col-4 mt-3">
-            <h5 id="Insert Day" class="">Min</h5>
-            <h5 id="Insert Min">30</h5>
+          <div class="col-4 mt-5 text-center">
+            <h5 id="" class="pb-3">Min</h5>
+            <h5 id="Insert Min" class="tenFont">30</h5>
            
         </div>
 
-        <div class="col-4  mt-3">
-          <h5 id="Insert Day" class="">Max</h5>
-          <h5 id="Insert Max">30</h5>
+        <div class="col-4  mt-5">
+          <h5 class="pb-3">Max</h5>
+          <h5 id="Insert Max" class="tenFont">30</h5>
           
       </div>
              
@@ -121,10 +122,22 @@
                 <div class="cardbg " style="width: 12rem;">
                  
                   <div class="card-body">
-                    <h5 class="card-text text-center">Some </h5>
+                    <h5 class="card-text text-center ">Some </h5>
                   </div>
-                  <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                  <img class="d-flex justify-content-center marginn" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
                   <p class="text-center">Sunny</p>
+                  <div class="row">
+                    <div class="col-6 px-0">
+                      <h5  id="minT1" class="text-end tenFont pt-4">60</h5>
+                      
+                    </div>
+                    <div class="col-6 px-0">
+                      <h5  id="maxT1'" class="text-start tenFont pt-4 ">60</h5>
+                    </div>
+                
+               
+               
+                </div>
 
                 </div>
               </div> 
@@ -133,8 +146,20 @@
                 
                   <div class="card-body">
                     <h5 class="card-text text-center">Some </h5>
-                    <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                    <img class="d-flex justify-content-center marginn" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
                     <p class="text-center">Sunny</p>
+                    <div class="row">
+                      <div class="col-6 px-0">
+                        <h5  id="minT2" class="text-end tenFont pt-4">60</h5>
+                        
+                      </div>
+                      <div class="col-6 px-0">
+                        <h5  id="maxT2'" class="text-start tenFont pt-4 ">60</h5>
+                      </div>
+                  
+                 
+                 
+                  </div>
                   </div>
                 </div>
               </div> 
@@ -144,8 +169,20 @@
      
                   <div class="card-body">
                     <h5 class="card-text text-center">Some </h5>
-                    <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                    <img class="d-flex justify-content-center marginn" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
                     <p class="text-center">Sunny</p>
+                    <div class="row">
+                      <div class="col-6 px-0">
+                        <h5  id="minT3" class="text-end tenFont pt-4">60</h5>
+                        
+                      </div>
+                      <div class="col-6 px-0">
+                        <h5  id="maxT3'" class="text-start tenFont pt-4 ">60</h5>
+                      </div>
+                  
+                 
+                 
+                  </div>
                   </div>
                 </div>
               </div> 
@@ -154,8 +191,20 @@
           
                   <div class="card-body">
                     <h5 class="card-text text-center">Some </h5>
-                    <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                    <img class="d-flex justify-content-center marginn" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
                     <p class="text-center">Sunny</p>
+                    <div class="row">
+                      <div class="col-6 px-0">
+                        <h5  id="minT4" class="text-end tenFont pt-4">60</h5>
+                        
+                      </div>
+                      <div class="col-6 px-0">
+                        <h5  id="maxT4'" class="text-start tenFont pt-4 ">60</h5>
+                      </div>
+                  
+                 
+                 
+                  </div>
                   </div>
                 </div>
               </div> 
@@ -164,8 +213,18 @@
                 
                
                   <h5 class="card-text text-center">Some </h5>
-                  <img class="d-flex justify-content-center" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
+                  <img class="d-flex justify-content-center marginn" src="./Images/2682849_cloud_cloudy_day_forecast_sun_icon.png" height="90px" alt="" srcset="">
                   <p class="text-center">Sunny</p>
+                  <div class="row">
+                    <div class="col-6 px-0">
+                      <h5  id="minT5" class="text-end tenFont pt-4">60</h5>
+                      
+                    </div>
+                    <div class="col-6 px-0">
+                      <h5  id="maxT5'" class="text-start tenFont pt-4 ">60</h5>
+                    </div>
+                
+               
                
                 </div>
               </div> 

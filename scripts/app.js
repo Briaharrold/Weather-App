@@ -7,12 +7,23 @@ let insertMax = document.getElementById("Insert Max");
 let insertName = document.getElementById("Insert Name");
 let insertDay = document.getElementById("Insert Day");
 let insertType = document.getElementById("Insert Type");
-const d = Date();
-const weekDay=["Sunday","Monday","Tuesday","Wednesday",,"Thursday","Friday","Saturday" ];
 let lat;
 let long;
 let userData = usersInput.value;
+let starBtn = document.getElementById("starBtn");
 
+let maxT1 = document.getElementById("maxT1");
+let maxT2 = document.getElementById("maxT2");
+// let maxT3 = document.getelementById('maxT3');
+// let maxT4 = document.getElementById('maxT4');
+// let maxTemp5 = document. getElementById('maxT5');
+let minT1 = document.getElementById("minT1");
+let minT2 = document.getElementById("minT2");
+// let minTemp3 = document.getelementById('minT3');
+// let minTemp4 = document.getelementById('minT4');
+// let minTemp5 = document.getElementById('minT5');
+
+// ;;;;;;;;;;
 
 function ApiCall(){
 
@@ -26,20 +37,33 @@ fetch(`https://history.openweathermap.org/data/3.0/history/timemachine?lat=51.51
 
 }
 
+
 btn.addEventListener('click',function(e){
-    let t = new Date();
-document.getElementById('date').innerText = t.toDateString();
-ApiCall2()
+    
+ApiCall2();
+// ApiC();
 
 });
+// async function ApiC(){
+//     const promise = fetch (`https://api.openweathermap.org/data/2.5/weather?zip=${userData},us&appid=${apiKey}`)
+//     const data = await promise.json();
+//     insertName.innerText = data.name;
+//     insertMax.innerText =  Math.floor(data.main.temp_max)+ "°";
+//     insertMin.innerText =  Math.floor(data.main.temp_min)+ "°";
+//     insertHere.innerText =  Math.floor(data.main.feels_like)+ "°";
+//     // insertType.innerText = " Type " + data.weather[0].main;
+
+// }
 async function ApiCall2(){
-    const promise = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userData}&appid=${apiKey}&units=imperial`);
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${userData}&appid=${apiKey}&units=imperial`);
     const data = await promise.json();
-    insertName.innerHTML = data.name;
-     insertMax.innerHTML =  Math.floor(data.main.temp_max)+ "°";
-     insertMin.innerHTML =  Math.floor(data.main.temp_min)+ "°";
-     insertHere.innerHTML =  Math.floor(data.main.feels_like)+ "°";
-     insertType.innerHTML = " Type " + data.weather[0].main;
+    console.log(userData);
+    insertName.innerText = data.name;
+     insertMax.innerText =  Math.floor(data.main.temp_max)+ "°";
+     insertMin.innerText =  Math.floor(data.main.temp_min)+ "°";
+     insertHere.innerText =  Math.floor(data.main.feels_like)+ "°";
+      insertType.innerText = " Type " + data.weather[0].main;
+      
 }
 
 //navigator.geolocation returns a gelocation object lat and long
@@ -60,6 +84,7 @@ async function success(position){
     console.log(long) ;
     console.log(lat) ;
     
+    
     const promise = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`);
     const data = await promise.json();
      insertName.innerHTML = data.name;
@@ -68,7 +93,26 @@ async function success(position){
      insertHere.innerHTML =  Math.floor(data.main.feels_like)+ "°";
      insertType.innerHTML = " Type " + data.weather[0].main;
 
+//      maxT1.innerHTML = Math.floor(data.list[1].main.temp_max );
+// minT1.innerHTML = Math.floor(data.list[1].main.temp_min);
+// maxT2.innerHTML = Math.floor(data.list[9].main.temp_max);
+// minT2.innerHTML= Math.floor(data.list[9].main.temp_min);
+
+//      const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+// let d = new Date("2023-12-7");
+// let day = days[d.getDay()];
+//  day = document.getElementById("Day").innerHTML;
+
      //search bar data
+     
+
+
+
+
+// maxT3.innerText = weather5Day. list[17].main.temp_max
+// minT.innerText = weathersDay.last.main.temp_min
+// maxT4.innerText = weatherSDay._ist_25.main.temp_max
+// minT4. innerText = weather5Day. list[25].main.temp_min
 
     }
 //    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&appid=${apiKey}`)
